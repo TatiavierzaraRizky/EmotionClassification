@@ -47,11 +47,12 @@ def load_assets():
         kamus_slang = json.loads("{" + content + "}")
 
     # 2. Load PyTorch Model 
-    model_dir = os.path.abspath("./best-model")
-    print(f"Loading PyTorch Model from: {model_dir}")
+    MODEL_NAME = "vierrzr/emotion-classification-model"
     
-    tokenizer = AutoTokenizer.from_pretrained(model_dir, local_files_only=True)
-    model = AutoModelForSequenceClassification.from_pretrained(model_dir, local_files_only=True)
+    print(f"Loading model from Hugging Face: {MODEL_NAME}")
+    
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+    model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME)
     model.eval()
     print("Model loaded successfully!")
 
