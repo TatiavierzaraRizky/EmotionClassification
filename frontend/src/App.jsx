@@ -8,7 +8,7 @@ const EMOTION_MAP = {
   love: { label: 'Cinta', emoji: '❤️', color: 'var(--color-love)', shadow: 'rgba(236, 72, 153, 0.4)' }
 };
 
-const BACKEND_URL = 'http://127.0.0.1:8000';
+const BACKEND_URL = "/api";
 
 export default function App() {
   const [inputText, setInputText] = useState('');
